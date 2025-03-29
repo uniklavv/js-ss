@@ -1,0 +1,250 @@
+/* Font */
+
+@font-face {
+  font-family: "XSAI";
+  src: url("../font/XSAI-OCR-11-Regular.otf");
+}
+
+@font-face {
+  font-family: "ZT Bros";
+  src: url("../font/ZTBrosOskon90s-Regular.otf");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../font/Inter-Bold.otf");
+}
+
+* {
+  font-family: "XSAI";
+
+  /* border: 0.1px solid #f00;  проверка на выход из границ */
+}
+
+/* Background */
+
+.background {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.background-item {
+  position: absolute;
+  z-index: -1;
+
+  object-fit: contain;
+}
+
+.item-1 {
+  top: 0;
+  left: 20%;
+  transform: rotate(60deg);
+}
+
+.item-2 {
+  top: 7%;
+  right: 22%;
+  transform: rotate(-10deg);
+  z-index: 1;
+}
+
+.item-3 {
+  top: 40%;
+  left: 10%;
+  transform: rotate(-20deg);
+}
+
+.item-4 {
+  top: 50%;
+  left: 30%;
+  transform: rotate(70deg);
+}
+
+.item-5 {
+  top: 1%;
+  left: 0;
+  max-width: 400px;
+  width: 100%;
+}
+
+.item-6 {
+  top: 46%;
+  left: 37%;
+  transform: rotate(70deg);
+  max-width: 400px;
+  width: 100%;
+}
+
+.item-7 {
+  top: 53%;
+  right: 0;
+  transform: rotate(0deg);
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Main */
+
+.main {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Infinity stroke */
+
+.infinity-stroke {
+  position: absolute;
+  top: 0;
+  display: flex;
+  overflow: hidden;
+  max-width: 1920px;
+  z-index: 10;
+  width: 100%;
+  margin: 10px auto;
+
+  font-size: clamp(16px, 3vw, 24px);
+  text-transform: uppercase;
+}
+
+.infinity-content {
+  display: flex;
+  justify-content: space-around;
+  width: 300%;
+  animation: running-line 3s linear infinite;
+}
+
+.infinity-content p {
+  margin: 0 44px;
+  white-space: nowrap;
+  width: 10%;
+}
+
+@keyframes running-line {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 912px) {
+  .item-5 {
+    top: 1%;
+    left: 0;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .item-6 {
+    top: 46%;
+    left: 37%;
+    transform: rotate(70deg);
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .item-7 {
+    top: 53%;
+    right: 0;
+    transform: rotate(0deg);
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .item-1 {
+    top: 0;
+    left: 20%;
+    transform: rotate(60deg);
+    max-width: 130px;
+    max-height: 200px;
+    width: 100%;
+  }
+
+  .item-2 {
+    top: 7%;
+    right: 22%;
+    transform: rotate(-10deg);
+    z-index: 1;
+    max-width: 130px;
+    max-height: 200px;
+    width: 100%;
+  }
+
+  .item-3 {
+    top: 40%;
+    left: 10%;
+    transform: rotate(-20deg);
+    max-width: 130px;
+    max-height: 200px;
+    width: 100%;
+  }
+
+  .item-4 {
+    top: 50%;
+    left: 30%;
+    transform: rotate(70deg);
+    max-width: 130px;
+    max-height: 200px;
+    width: 100%;
+  }
+
+  .item-5 {
+    top: 1%;
+    left: 0;
+    max-width: 250px;
+    max-height: 250px;
+    width: 100%;
+  }
+
+  .item-6 {
+    top: 46%;
+    left: 37%;
+    transform: rotate(70deg);
+    max-width: 250px;
+    max-height: 250px;
+    width: 100%;
+  }
+
+  .item-7 {
+    top: 53%;
+    right: 0;
+    transform: rotate(0deg);
+    max-width: 250px;
+    max-height: 250px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .item-5 {
+    top: 1%;
+    left: 0;
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+  }
+
+  .item-6 {
+    top: 46%;
+    left: 37%;
+    transform: rotate(70deg);
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+  }
+
+  .item-7 {
+    top: 53%;
+    right: 0;
+    transform: rotate(0deg);
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+  }
+}
